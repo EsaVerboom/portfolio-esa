@@ -1,4 +1,4 @@
-/* General body */
+/* ===== General body ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-/* Header and navigation */
+/* ===== Header and navigation ===== */
 header {
   background-color: #2a2a2a;
   padding: 15px 0;
@@ -35,7 +35,7 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* Main content */
+/* ===== Main content ===== */
 main {
   padding: 40px 20px;
   max-width: 900px;
@@ -49,57 +49,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Projects section */
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-}
-
-.project-card {
-  max-width: 600px;
-  width: 100%;
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #2a7fff;
-}
-
-.project-card p {
-  margin-bottom: 15px;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.project-card a {
-  text-decoration: none;
-  color: white;
-  background-color: #2a7fff;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.project-card a:hover {
-  background-color: #1a5fcc;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 20px;
@@ -109,13 +59,8 @@ footer {
   color: #777;
 }
 
-/* Responsive */
+/* ===== Responsive (page-level only) ===== */
 @media (max-width: 768px) {
-  .project-card {
-    width: 100%;
-    padding: 20px;
-  }
-
   nav a {
     display: block;
     margin: 10px 0;

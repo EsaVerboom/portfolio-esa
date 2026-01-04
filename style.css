@@ -1,23 +1,22 @@
-/* General body */
+/* ===== General body ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* white page background */
-  color: #333; /* dark text */
+  background-color: #ffffff;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Header and navigation */
+/* ===== Header and navigation ===== */
 header {
-  background-color: #2a2a2a; /* dark menu bar */
+  background-color: #2a2a2a;
   padding: 15px 0;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navigation menu */
 nav {
-  display: inline-block; /* center as a block */
+  display: inline-block;
 }
 
 nav a {
@@ -32,20 +31,21 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #2a7fff; /* hover color */
+  background-color: #2a7fff;
   color: #ffffff;
 }
 
-/* Main content */
+/* ===== Main content ===== */
 main {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
-  background-color: #ffffff; /* main white content */
+  background-color: #ffffff;
 }
 
-h1, h2 {
-  color: #2a7fff; /* accent color */
+h1,
+h2 {
+  color: #2a7fff;
 }
 
 p {
@@ -53,17 +53,7 @@ p {
   line-height: 1.6;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f2f2f2;
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #777;
-}
-
-/* Intro section with photo */
+/* ===== Intro section ===== */
 .intro {
   display: flex;
   align-items: center;
@@ -80,18 +70,19 @@ footer {
 .intro-photo {
   flex: 0 0 200px;
   margin-left: 30px;
-  float: right;
 }
 
 .intro-photo img {
   width: 300px;
   border-radius: 40%;
-  border: 3px solid #2a7fff; /* accent border around photo */
+  border: 3px solid #2a7fff;
   object-fit: cover;
 }
+
+/* ===== Skills ===== */
 .skills {
   margin-top: 20px;
-  text-align: center; /* centers the list under the photo */
+  text-align: center;
 }
 
 .skills ul {
@@ -102,63 +93,41 @@ footer {
 .skills li {
   margin: 5px 0;
 }
-/* ===== Projects Section ===== */
-.projects-section {
-  margin-top: 30px; /* move closer to intro */
-}
 
-.projects-section h2 {
-  margin-bottom: 20px;
-  color: #2a7fff;
-  font-size: 1.8rem;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column; /* stacked vertically */
-  gap: 20px;
-}
-
-.project-card {
-  max-width: 700px;
-  width: 100%; /* responsive */
-  background: #f9f9f9;
-  border-radius: 12px;
+/* ===== Footer ===== */
+footer {
+  text-align: center;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #777;
 }
 
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #2a7fff;
+/* ===== Image overlay ===== */
+#img-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
 }
 
-.project-card p {
-  margin-bottom: 15px;
-  color: #333;
+#img-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-.project-card a {
-  text-decoration: none;
-  color: white;
-  background: #2a7fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.project-card a:hover {
-  background: #1a5fcc;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-/* ===== Responsive adjustments ===== */
+/* ===== Responsive (page-only) ===== */
 @media (max-width: 768px) {
   .intro {
     flex-direction: column;
@@ -171,13 +140,6 @@ footer {
 
   .intro-photo {
     margin-top: 20px;
-  }
-
-  .projects {
-    gap: 15px;
-  }
-
-  .project-card {
-    width: 100%;
+    margin-left: 0;
   }
 }
