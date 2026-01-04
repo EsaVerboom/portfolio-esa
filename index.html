@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Test Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>This is a simple HTML/CSS portfolio deployed via GitHub Pages.</p>
 
-  <!-- Example image usage (optional) -->
-  <!-- <img src="assets/image1.png" alt="Example Image" width="200"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Intro Section -->
+        <section class="intro">
+            <div class="intro-text">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Hi, I’m Esa Verboom. I’m a third-year student studying Software Engineering (HBO-ICT) at the HvA.
+                    I’m passionate about creating innovative tech solutions that make life
+                    easier and more interactive.</p>
+
+                <p>During my studies, I’ve worked on projects involving Unity, AR Foundation, web development, and UX/UI
+                    design.
+                    I enjoy exploring new technologies, problem-solving, and turning ideas into real-world applications.
+                </p>
+
+                <p>On this portfolio, you can check out my projects, see my skills, and get a sense of my approach to
+                    technology and design.</p>
+            </div>
+
+
+            <div class="intro-photo">
+                <img src="assets/esa.jpeg" alt="Photo of Esa" />
+            </div>
+        </section>
+
+        <!-- Project Highlights -->
+        <section class="projects-section">
+            <h2>Highlighted Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>AR Wayfinding System</h3>
+                    <p>Indoor navigation system for hospitals using AR and QR codes.</p>
+                    <a href="ar-wayfinding.html">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Dark Tech Project</h3>
+                    <p>Innovative project exploring Dark Tech applications.</p>
+                    <a href="dark-tech.html">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Tracking Systems Report</h3>
+                    <p>Analysis of AR tracking technologies and their applications.</p>
+                    <a href="tracking-report.html">View Project</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Esa Verboom
+    </footer>
 </body>
+
 </html>
