@@ -44,25 +44,21 @@
         </section>
 
         <!-- Project Highlights -->
-        <section class="projects-section">
-            <h2>Highlighted Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>AR Wayfinding System</h3>
-                    <p>Indoor navigation system for hospitals using AR and QR codes.</p>
-                    <a href="ar-wayfinding.html">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Dark Tech Project</h3>
-                    <p>Innovative project exploring Dark Tech applications.</p>
-                    <a href="dark-tech.html">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>upcoming</h3>
-                    <p>More projects coming soon.</p>
-                </div>
-            </div>
-        </section>
+      <section class="projects-section">
+  <h1>My Projects</h1>
+  <div id="projects-container">
+    <!-- Projects will load here -->
+  </div>
+</section>
+
+<script>
+  fetch('projects-list.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('projects-container').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading projects:', err));
+</script>
 
     </main>
 
