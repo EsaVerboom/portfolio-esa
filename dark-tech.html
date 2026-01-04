@@ -2,27 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dark Tech | My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Controlling Wearable | Portfolio</title>
+  <link rel="stylesheet" href="dark-tech.css">
 </head>
 <body>
   <header>
-    <h1>Dark Tech Projects</h1>
     <nav>
-       <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>Projects</h2>
-    <p>This page is for showcasing projects related to Dark Tech. You can add images, descriptions, and links here.</p>
+
+    <section class="project-intro">
+      <h1>Controlling Wearable</h1>
+      <p>
+        The Controlling Wearable is a <strong>provocative wearable prototype</strong> that explores the ethical boundaries
+        of gamification, control, and motivation in wearable technology.
+        The project intentionally focuses on <strong>unethical design choices</strong> to spark discussion and reflection.
+      </p>
+    </section>
+
+    <section class="project-context">
+      <h2>Project Context & Goal</h2>
+      <p>
+        This project was created as part of a Dark Tech assignment, where the goal was to design a technology that
+        challenges ethical norms. Instead of designing a “good” or responsible product, we deliberately created the opposite:
+        an <strong>unethical prototype</strong>.
+      </p>
+      <p>
+        We designed a <strong>Fitbit / Pip‑Boy style gambling bracelet</strong> that uses gambling mechanics to
+        <strong>control user behavior</strong>. The wearable motivates users to exercise more by locking progress,
+        rewards, or game access behind physical activity.
+      </p>
+      <p>
+        The main goal was not to promote gambling, but to <strong>learn about ethics, manipulation, and responsibility</strong>
+        by designing a system that intentionally crosses ethical boundaries.
+      </p>
+    </section>
+
+    <section class="project-role">
+      <h2>My Role in the Project</h2>
+      <p>
+        I worked as a <strong>Creative Technologist</strong> in a multidisciplinary team of 5.
+        My responsibilities included both technical and conceptual contributions.
+      </p>
+      <ul>
+        <li>Concept development and ethical framing of the product</li>
+        <li>Designing the wearable’s visual style and interaction flow</li>
+        <li>Making decisions about hardware and form factor</li>
+        <li>Programming and prototyping game mechanics</li>
+        <li>Actively contributing to team discussions and design decisions</li>
+      </ul>
+    </section>
+
+    <section class="project-games">
+      <h2>Games & Mechanics</h2>
+      <p>
+        The wearable featured multiple gambling-inspired mechanics designed to influence user behavior.
+      </p>
+      <ul>
+        <li><strong>Roulette Game</strong> – fully designed and implemented by me</li>
+        <li><strong>Slot Machine</strong> – contributed to design and mechanics</li>
+        <li>Exercise-based progression system</li>
+        <li>Restricted access to rewards to increase dependency</li>
+      </ul>
+      <p>
+        I researched <strong>slot machine mechanics, RTP (Return to Player)</strong>, and real-world gambling strategies
+        to ensure the system felt realistic and psychologically persuasive.
+      </p>
+    </section>
+
+    <section class="project-skills">
+      <h2>Skills Demonstrated</h2>
+      <ul>
+        <li>Creative technology & conceptual design</li>
+        <li>Ethical analysis and critical reflection</li>
+        <li>Game design and gamification mechanics</li>
+        <li>Unity development and prototyping</li>
+        <li>Hardware-oriented thinking and wearable design</li>
+        <li>Research into behavioral psychology and gambling systems</li>
+        <li>Team collaboration and communication</li>
+      </ul>
+    </section>
+
+    <section class="project-reflection">
+      <h2>Reflection & Learning Outcomes</h2>
+      <p>
+        This project taught me how easily technology can manipulate behavior when unethical design choices are made.
+        By intentionally designing a controlling system, I gained deeper insight into:
+      </p>
+      <ul>
+        <li>The responsibility designers and developers carry</li>
+        <li>How gamification can become manipulation</li>
+        <li>The importance of ethical boundaries in tech design</li>
+      </ul>
+      <p>
+        Creating an unethical prototype helped me better understand why ethical decision‑making is essential in
+        real-world technology development.
+      </p>
+    </section>
+
+<section class="project-photos">
+  <h2>Project Images</h2>    <p>Click images to enlarge</p>
+
+  <div class="photos">
+  <div class="photo-item">
+    <p class="photo-title">Controlling Wearable First Prototype</p>
+    <img src="assets/wearable/proto1.jpeg" alt="Controlling Wearable prototype" class="clickable-img">
+  </div>
+
+  <div class="photo-item">
+    <p class="photo-title">Controlling Wearable Second Prototype</p>
+    <img src="assets/wearable/" alt="Gambling interface design" class="clickable-img">
+  </div>
+
+  <div class="photo-item">
+    <p class="photo-title">Roulette Game Screen</p>
+    <img src="assets/wearable/roullette.png" alt="Roulette game screen" class="clickable-img">
+  </div>
+
+  <div class="photo-item">
+    <p class="photo-title">Slots Game interface</p>
+    <img src="assets/wearable/slots.gif" alt="Slots game demo" class="clickable-img">
+  </div>
+</div>
+
+</section>
+
+<!-- Overlay for enlarged image -->
+<div id="img-overlay" onclick="closeOverlay()">
+  <img id="overlay-img" src="" alt="Enlarged image">
+</div>
+
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    &copy; 2026 My Name
+    &copy; 2026 Esa Verboom
   </footer>
+  <script>
+  const overlay = document.getElementById('img-overlay');
+  const overlayImg = document.getElementById('overlay-img');
+
+  // Get all clickable images
+  const images = document.querySelectorAll('.clickable-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImg.src = img.src; // set overlay image
+      overlay.style.display = 'flex'; // show overlay
+    });
+  });
+
+  // Close overlay
+  function closeOverlay() {
+    overlay.style.display = 'none';
+    overlayImg.src = '';
+  }
+</script>
+
 </body>
 </html>

@@ -1,28 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Dark Tech | My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>AR Wayfinding | Portfolio</title>
+    <link rel="stylesheet" href="ar-wayfinding.css">
 </head>
+
 <body>
-  <header>
-    <h1>Dark Tech Projects</h1>
-    <nav>
-     <a href="index.html">Home</a>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+        </nav>
+    </header>
 
-  <main>
-    <h2>Projects</h2>
-    <p>This page is for showcasing projects related to Dark Tech. You can add images, descriptions, and links here.</p>
-  </main>
+    <main>
+        <section class="project-intro">
+            <h1>AR Wayfinding System</h1>
+            <p>
+                The AR Wayfinding project is an <strong>indoor navigation system for hospitals</strong> using Augmented Reality.
+                It guides users to destinations through AR overlays on mobile devices and provides step-by-step directions
+                inside complex buildings.
+            </p>
+        </section>
 
-  <footer>
-    &copy; 2026 My Name
-  </footer>
+        <section class="project-context">
+            <h2>Project Context & Goal</h2>
+            <p>
+                Large hospitals can be confusing to navigate. The goal was to create a system that helps visitors, patients,
+                and staff find their way indoors, improving efficiency and reducing stress.
+            </p>
+            <p>
+                I developed the system as a prototype using <strong>Unity, AR Foundation, and QR code tracking</strong>.
+                Floors are mapped with images, routes calculated via Dijkstra’s algorithm, and destinations aligned in AR
+                for accurate navigation.
+            </p>
+        </section>
+
+        <section class="project-role">
+            <h2>My Role in the Project</h2>
+            <ul>
+                <li>Developed the AR navigation system using Unity & AR Foundation</li>
+                <li>Integrated QR code tracking for positioning and route alignment</li>
+                <li>Implemented Dijkstra’s algorithm for shortest-path calculations</li>
+                <li>Designed user interface and AR overlays</li>
+                <li>Tested tracking accuracy and user experience in hospital-like environments</li>
+            </ul>
+        </section>
+
+        <section class="project-skills">
+            <h2>Skills Demonstrated</h2>
+            <ul>
+                <li>Unity development for AR applications</li>
+                <li>AR Foundation & QR code tracking</li>
+                <li>Pathfinding algorithms (Dijkstra)</li>
+                <li>Indoor mapping & coordinate systems</li>
+                <li>UX/UI design for AR navigation</li>
+                <li>Testing & iteration in AR environments</li>
+                <li>Problem-solving in technical constraints</li>
+            </ul>
+        </section>
+
+        <section class="project-features">
+            <h2>System Features</h2>
+            <ul>
+                <li>Indoor mapping with multiple floors and floor-specific navigation</li>
+                <li>Destination points, junctions, and elevator navigation</li>
+                <li>Real-time shortest path calculation</li>
+                <li>AR overlay guidance on mobile device camera</li>
+                <li>QR codes used for accurate positioning and calibration</li>
+            </ul>
+        </section>
+
+        <section class="project-reflection">
+            <h2>Reflection & Learning Outcomes</h2>
+            <p>
+                This project gave me experience in designing AR systems for real-world use cases and understanding indoor navigation challenges. I learned:
+            </p>
+            <ul>
+                <li>How to integrate AR with real-world maps and coordinate systems</li>
+                <li>Challenges of accurate AR tracking indoors using QR codes</li>
+                <li>The importance of user-friendly interface design in AR</li>
+                <li>Collaboration between hardware mapping and software route calculation</li>
+            </ul>
+        </section>
+
+        <section class="project-photos">
+            <h2>Project Images</h2>
+            <p>Click images to enlarge</p>
+            <div class="photos">
+                <div class="photo-item">
+                    <div class="photo-title">Example of route interface</div>
+                    <img src="assets/wayfinding/path4.png" alt="Example of route interface" class="clickable-img">
+                </div>
+                <div class="photo-item">
+                    <div class="photo-title">Route of first floor in Unity</div>
+                    <img src="assets/wayfinding/path3.png" alt="Route interface in Unity" class="clickable-img">
+                </div>
+                <div class="photo-item">
+                    <div class="photo-title">All routes of hospital in Unity</div>
+                    <img src="assets/wayfinding/path2.png" alt="All routes of hospital in Unity" class="clickable-img">
+                </div>
+                <div class="photo-item">
+                    <div class="photo-title">All routes of hospital in Unity</div>
+                    <img src="assets/wayfinding/path1.png" alt="All routes of hospital in Unity" class="clickable-img">
+                </div>
+                <div class="photo-item">
+                    <div class="photo-title">Navigation Path Start</div>
+                    <img src="assets/wayfinding/routeStart.png" alt="Navigation Path Start" class="clickable-img">
+                </div>
+                <div class="photo-item">
+                    <div class="photo-title">Navigation Path Demo</div>
+                    <img src="assets/wayfinding/route1.png" alt="Navigation Path Demo" class="clickable-img">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Esa Verboom
+    </footer>
+
+    <!-- Overlay MUST be AFTER all images -->
+    <div id="img-overlay" onclick="closeOverlay()">
+        <img id="overlay-img" src="" alt="Enlarged image">
+    </div>
+
+    <script>
+        // Wait until DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('img-overlay');
+            const overlayImg = document.getElementById('overlay-img');
+
+            // Get all clickable images
+            const images = document.querySelectorAll('.clickable-img');
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    overlayImg.src = img.src; // set overlay image
+                    overlay.style.display = 'flex'; // show overlay
+                });
+            });
+
+            // Close overlay
+            window.closeOverlay = function () {
+                overlay.style.display = 'none';
+                overlayImg.src = '';
+            }
+        });
+    </script>
 </body>
+
 </html>
