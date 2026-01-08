@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Controlling Wearable | Portfolio</title>
   <link rel="stylesheet" href="dark-tech.css">
 </head>
+
 <body>
   <header>
     <nav>
@@ -20,9 +22,11 @@
     <section class="project-intro">
       <h1>Controlling Wearable</h1>
       <p>
-        The Controlling Wearable is a <strong>provocative wearable prototype</strong> that explores the ethical boundaries
+        The Controlling Wearable is a <strong>provocative wearable prototype</strong> that explores the ethical
+        boundaries
         of gamification, control, and motivation in wearable technology.
-        The project intentionally focuses on <strong>unethical design choices</strong> to spark discussion and reflection.
+        The project intentionally focuses on <strong>unethical design choices</strong> to spark discussion and
+        reflection.
       </p>
     </section>
 
@@ -30,7 +34,8 @@
       <h2>Project Context & Goal</h2>
       <p>
         This project was created as part of a Dark Tech assignment, where the goal was to design a technology that
-        challenges ethical norms. Instead of designing a “good” or responsible product, we deliberately created the opposite:
+        challenges ethical norms. Instead of designing a “good” or responsible product, we deliberately created the
+        opposite:
         an <strong>unethical prototype</strong>.
       </p>
       <p>
@@ -39,7 +44,8 @@
         rewards, or game access behind physical activity.
       </p>
       <p>
-        The main goal was not to promote gambling, but to <strong>learn about ethics, manipulation, and responsibility</strong>
+        The main goal was not to promote gambling, but to <strong>learn about ethics, manipulation, and
+          responsibility</strong>
         by designing a system that intentionally crosses ethical boundaries.
       </p>
     </section>
@@ -106,50 +112,51 @@
       </p>
     </section>
 
-<section class="project-photos">
-  <h2>Project Images</h2>    <p>Click images to enlarge</p>
+    <section class="project-photos">
+      <h2>Project Images</h2>
+      <p>Click images to enlarge</p>
 
-  <div class="photos">
-  <div class="photo-item">
-    <p class="photo-title">Controlling Wearable First Prototype</p>
-    <img src="assets/wearable/prototype.jpeg" alt="Controlling Wearable prototype" class="clickable-img">
-  </div>
+      <div class="photos">
+        <div class="photo-item">
+          <p class="photo-title">Controlling Wearable First Prototype</p>
+          <img src="assets/wearable/prototype.jpeg" alt="Controlling Wearable prototype" class="clickable-img">
+        </div>
 
-  <div class="photo-item">
-    <p class="photo-title">Controlling Wearable Second Prototype</p>
-    <img src="assets/wearable/prototypeTwee.jpg" alt="Gambling interface design" class="clickable-img">
-  </div>
+        <div class="photo-item">
+          <p class="photo-title">Controlling Wearable Second Prototype</p>
+          <img src="assets/wearable/prototypeTwee.jpg" alt="Gambling interface design" class="clickable-img">
+        </div>
 
-  <div class="photo-item">
-    <p class="photo-title">Roulette Game Screen</p>
-    <img src="assets/wearable/roullette.png" alt="Roulette game screen" class="clickable-img">
-  </div>
+        <div class="photo-item">
+          <p class="photo-title">Roulette Game Screen</p>
+          <img src="assets/wearable/roullette.png" alt="Roulette game screen" class="clickable-img">
+        </div>
 
-  <div class="photo-item">
-    <p class="photo-title">User interface Slots </p>
-    <img src="assets/wearable/ui1.png" alt="slots interface" class="clickable-img">
-  </div>
+        <div class="photo-item">
+          <p class="photo-title">User interface Slots </p>
+          <img src="assets/wearable/ui1.png" alt="slots interface" class="clickable-img">
+        </div>
 
-  <div class="photo-item">
-    <p class="photo-title">Slots Game interface</p>
-    <img src="assets/wearable/slots.gif" alt="Slots game demo" class="clickable-img">
-  </div>
+        <div class="photo-item">
+          <p class="photo-title">Slots Game interface</p>
+          <img src="assets/wearable/slots.gif" alt="Slots game demo" class="clickable-img">
+        </div>
 
-  <div class="photo-item">
-    <p class="photo-title">Win Animation </p>
-    <img src="assets/wearable/gif1.gif" alt="win demo" class="clickable-img">
-  </div>
-</div>
-
-</section>
-
-<!-- Overlay for enlarged image -->
-<div id="img-overlay" onclick="closeOverlay()">
-  <img id="overlay-img" src="" alt="Enlarged image">
-</div>
-
-
+        <div class="photo-item">
+          <p class="photo-title">Win Animation </p>
+          <img src="assets/wearable/gif1.gif" alt="win demo" class="clickable-img">
+        </div>
       </div>
+
+    </section>
+
+    <!-- Overlay for enlarged image -->
+    <div id="img-overlay" onclick="closeOverlay()">
+      <img id="overlay-img" src="" alt="Enlarged image">
+    </div>
+
+
+    </div>
     </section>
 
   </main>
@@ -158,25 +165,26 @@
     &copy; 2026 Esa Verboom
   </footer>
   <script>
-  const overlay = document.getElementById('img-overlay');
-  const overlayImg = document.getElementById('overlay-img');
+    const overlay = document.getElementById('img-overlay');
+    const overlayImg = document.getElementById('overlay-img');
 
-  // Get all clickable images
-  const images = document.querySelectorAll('.clickable-img');
+    // Get all clickable images
+    const images = document.querySelectorAll('.clickable-img');
 
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      overlayImg.src = img.src; // set overlay image
-      overlay.style.display = 'flex'; // show overlay
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src; // set overlay image
+        overlay.style.display = 'flex'; // show overlay
+      });
     });
-  });
 
-  // Close overlay
-  function closeOverlay() {
-    overlay.style.display = 'none';
-    overlayImg.src = '';
-  }
-</script>
+    // Close overlay
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      overlayImg.src = '';
+    }
+  </script>
 
 </body>
+
 </html>
