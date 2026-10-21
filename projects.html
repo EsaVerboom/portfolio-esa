@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Projects | Portfolio</title>
-  <link rel="stylesheet" href="projects.css">
-  <link rel="stylesheet" href="projects-shared.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects-shared.css">
 
 </head>
 <body>
@@ -18,20 +18,51 @@
   </header>
 
   <main>
-   <section class="projects-section">
-  <h1>My Projects</h1>
+   <section class="projects-section projects-page">
+  <h1>Selected projects</h1>
+  <p>Projects where engineering, interaction design and creative technology meet.</p>
+  <div class="project-filter" aria-label="Filter projects">
+    <button class="filter-button active" data-filter="all">All</button>
+    <button class="filter-button" data-filter="unity">Unity</button>
+    <button class="filter-button" data-filter="ar">AR</button>
+    <button class="filter-button" data-filter="uiux">UI/UX</button>
+    <button class="filter-button" data-filter="dark-tech">Dark Tech</button>
+    <button class="filter-button" data-filter="critical-design">Critical Design</button>
+  </div>
   <div id="projects-container">
     <!-- Projects will load here -->
   </div>
 </section>
 
+<script src="js/projects-list.js"></script>
+<script>renderProjects(document.getElementById('projects-container'));</script>
+<div class="teleport-menu">
+  <div class="teleport-links" aria-label="Quick navigation">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button class="teleport-toggle" type="button" aria-expanded="false" aria-label="Open quick navigation">✦</button>
+</div>
 <script>
-  fetch('projects-list.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('projects-container').innerHTML = data;
-    })
-    .catch(err => console.error('Error loading projects:', err));
+  const applyFilter = filter => {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.classList.toggle('is-hidden', filter !== 'all' && !card.dataset.tags.includes(filter));
+    });
+  };
+  document.querySelectorAll('.filter-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-button').forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      applyFilter(button.dataset.filter);
+    });
+  });
+  const menu = document.querySelector('.teleport-menu');
+  const toggle = document.querySelector('.teleport-toggle');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
 </script>
   </main>
 

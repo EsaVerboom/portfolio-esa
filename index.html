@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="projects-shared.css">
+    <title>Esa Verboom | Creative Technologist</title>
+    <meta name="description" content="Portfolio of Esa Verboom, a Software Engineering student and creative technologist seeking a Spring 2027 graduation internship in Stockholm.">
+    <meta property="og:title" content="Esa Verboom | Creative Technologist">
+    <meta property="og:description" content="Software engineering, AR, Unity, UI/UX and creative technology projects.">
+    <meta property="og:image" content="assets/Profile_picture/esa2.jpeg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects-shared.css">
 
 </head>
 
@@ -25,42 +30,42 @@
         <!-- Intro Section -->
         <section class="intro">
             <div class="intro-text">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Hi, I’m Esa Verboom. I’m a third-year student studying Software Engineering (HBO-ICT) at the HvA.
-                    I’m passionate about creating innovative tech solutions that make life
-                    easier and more interactive.</p>
+                <p class="eyebrow">SOFTWARE ENGINEERING · CREATIVE TECHNOLOGY</p>
+                <h1>Software Engineer & Creative Technologist based in Amsterdam.</h1>
+                <p>Hi, I’m Esa Verboom, a Software Engineering student at the HvA who combines code, interaction and visual thinking to make technology feel more intuitive.</p>
+                <div class="availability"><strong>Available Spring 2027</strong><br>Seeking a 5-month graduation internship in Stockholm across frontend, Backend, UI/UX, full stack or interactive media. Always open to learn new things.</div>
 
-                <p>During my studies, I’ve worked on projects involving Unity, AR Foundation, web development, and UX/UI
+                <p>During my studies, I’ve worked on projects involving Unity, AR Foundation, web development, databases, backend and UX/UI
                     design.
                     I enjoy exploring new technologies, problem-solving, and turning ideas into real-world applications.
                 </p>
 
-                <p>On this portfolio, you can check out my projects, see my skills, and get a sense of my approach to
-                    technology and design.</p>
+                <p>My work spans Unity and C#, TypeScript and other programming languages, AR navigation, web development, prototyping, ethical research and critical design.</p>
+                <div class="button-row">
+                    <a class="button" href="projects.html">Explore my work</a>
+                    <a class="button secondary" href="contact.html">Let’s connect</a>
+                </div>
             </div>
 
 
             <div class="intro-photo">
-                <img src="assets/esa.jpeg" alt="Photo of Esa" />
+                <img src="assets/Profile_picture/esa2.jpeg" alt="Photo of Esa" />
             </div>
         </section>
 
         <!-- Project Highlights -->
       <section class="projects-section">
-  <h1>My Projects</h1>
+  <h2>Selected work</h2>
   <div id="projects-container">
     <!-- Projects will load here -->
   </div>
+  <div class="button-row projects-cta">
+    <a class="button secondary" href="projects.html">View more projects</a>
+  </div>
 </section>
 
-<script>
-  fetch('projects-list.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('projects-container').innerHTML = data;
-    })
-    .catch(err => console.error('Error loading projects:', err));
-</script>
+<script src="js/projects-list.js"></script>
+<script>renderProjects(document.getElementById('projects-container'), true);</script>
 
     </main>
 

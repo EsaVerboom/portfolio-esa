@@ -1,0 +1,89 @@
+.project-intro,
+.project-context,
+.project-role,
+.project-games,
+.project-skills,
+.project-reflection,
+.project-photos {
+  margin-bottom: 34px;
+}
+
+.project-intro p,
+.project-context p,
+.project-role p,
+.project-games p,
+.project-reflection p {
+  max-width: 780px;
+}
+
+.project-intro strong,
+.project-context strong,
+.project-role strong,
+.project-games strong,
+.project-reflection strong {
+  color: var(--text);
+}
+
+.project-photos {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: flex-start;
+}
+
+.photo-item {
+  flex: 1 1 240px;
+  max-width: 300px;
+}
+
+.photo-item img {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.photo-item img:hover {
+  border-color: var(--cyan);
+  transform: scale(1.03);
+}
+
+.photo-title {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+#img-overlay {
+  align-items: center;
+  background: rgba(3, 7, 18, 0.9);
+  cursor: zoom-out;
+  display: none;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+#img-overlay img {
+  border: 1px solid var(--cyan);
+  border-radius: 14px;
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .photo-item {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
